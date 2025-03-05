@@ -34,3 +34,6 @@ An SAP Fiori application.
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
 
 
+### Notes
+
+- The original url was src="resources/sap-ui-core.js" in index.html. This works only when run locally or deploy to SAP BTP. If we deploy to a non-SAP platform like Netlify it won't work even if we add the proxy in ui5.yaml. Because that file is not recognised by non-SAP plaforms. So one work around is to change the url to full url like this - src="https://ui5.sap.com/resources/sap-ui-core.js".Another way is to create a redirects file.
